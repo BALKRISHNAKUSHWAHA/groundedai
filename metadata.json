@@ -1,0 +1,6 @@
+{
+  "name": "ResearchHub AI",
+  "description": "AI for Research & Knowledge Discovery Platform - Multi-source ingestion, RAG chat assistant, automated literature synthesis matrix, and citation hub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

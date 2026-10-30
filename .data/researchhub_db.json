@@ -1,0 +1,170 @@
+{
+  "users": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "email": "dr.sarah@researchhub.ai",
+      "password_hash": "$2b$10$Pih5.19cvcnwa/mOqTSHgOz4JsWDK7UB.Gsek/QPNSJNGBTdbNkIm",
+      "full_name": "Dr. Sarah Lin",
+      "created_at": "2026-01-15T09:00:00.000Z",
+      "updated_at": "2026-01-15T09:00:00.000Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "10000000-0000-4000-8000-000000000001",
+      "user_id": "00000000-0000-4000-8000-000000000001",
+      "title": "Quantum Computing in Molecular Docking & Drug Discovery",
+      "description": "Evaluating variational quantum eigensolver (VQE) and quantum annealing for macrocyclic ligand binding affinity prediction against SARS-CoV-2 protease.",
+      "domain": "Biomedical & Life Sciences",
+      "created_at": "2026-02-10T14:30:00.000Z",
+      "updated_at": "2026-02-10T14:30:00.000Z"
+    },
+    {
+      "id": "10000000-0000-4000-8000-000000000002",
+      "user_id": "00000000-0000-4000-8000-000000000001",
+      "title": "Vision Transformers vs CNNs for Histopathology Image Segmentation",
+      "description": "Systematic benchmark of Swin-Transformer and ConvNeXt backbones on whole-slide cancer tissue biopsies under low-resource domain shift.",
+      "domain": "Computer Science & AI",
+      "created_at": "2026-02-18T11:15:00.000Z",
+      "updated_at": "2026-02-18T11:15:00.000Z"
+    }
+  ],
+  "sources": [
+    {
+      "id": "20000000-0000-4000-8000-000000000001",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "title": "Variational Quantum Eigensolver for Catalytic Protease Binding Affinity",
+      "authors": "K. Thorne, E. Vance, & M. Hayashi",
+      "publication_year": 2025,
+      "source_type": "pdf",
+      "file_path": "uploads/thorne2025_vqe.pdf",
+      "raw_content": "Abstract: Variational quantum algorithms present an unprecedented avenue for simulating complex biomolecular interactions. In this study, we implement a modified Variational Quantum Eigensolver (VQE) with hardware-efficient ansatz on a 127-qubit superconducting quantum processor. We target the catalytic pocket of SARS-CoV-2 main protease (Mpro) complexed with candidate covalent inhibitors.\nMethodology: Active space orbital selection is performed using complete active space self-consistent field (CASSCF) calculations, mapping 14 active electrons into 14 spatial orbitals (28 qubits). Zero-noise extrapolation (ZNE) and readout error mitigation are applied to suppress hardware decoherence.\nKey Findings: The hybrid quantum-classical pipeline resolved ground-state binding energy within 1.4 kcal/mol of high-level CCSD(T) benchmarks, demonstrating chemical accuracy while reducing classical compute runtime by 64% compared to standard density functional theory (DFT) grids.\nLimitations: Scalability remains constrained by two-qubit gate error rates (>0.5%) and shot noise, limiting current feasibility to small fragments rather than full peptide complexes.",
+      "created_at": "2026-02-11T10:00:00.000Z"
+    },
+    {
+      "id": "20000000-0000-4000-8000-000000000002",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "title": "QUBO Mapping of Rotamer Optimization on D-Wave Quantum Annealers",
+      "authors": "A. Chen, D. Kowalski, & R. Gupta",
+      "publication_year": 2025,
+      "source_type": "text",
+      "raw_content": "Abstract: Quantum annealing offers discrete optimization capabilities well-suited for combinatorial peptide conformational search. We map protein-ligand side-chain rotamer placement to a Quadratic Unconstrained Binary Optimization (QUBO) Hamiltonian and execute sampling on an Advantage 5000+ qubit annealer.\nMethodology: The continuous conformational space is discretized into Dunbrack rotamer libraries. Energy terms including Lennard-Jones, electrostatic Coulomb, and desolvation are precalculated to generate the interaction matrix. Chain strength parameters were systematically calibrated between 1.5 and 4.0.\nKey Findings: The quantum annealer identified low-energy native-like binding poses in under 22 milliseconds per candidate, outperforming standard simulated annealing and genetic algorithms (AutoDock Vina) by 3 orders of magnitude in search latency, with top-1 RMSD < 1.2 Å.\nLimitations: Severe graph embedding bottlenecks due to Pegasus connectivity limit simultaneous modeling to at most 45 amino acid residues.",
+      "created_at": "2026-02-12T15:20:00.000Z"
+    },
+    {
+      "id": "20000000-0000-4000-8000-000000000003",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "title": "Benchmark of Classical QM/MM Free Energy Perturbation in High-Throughput Screening",
+      "authors": "L. Martinez & B. Dupont",
+      "publication_year": 2024,
+      "source_type": "url",
+      "file_path": "https://doi.org/10.1038/s41598-024-00123-x",
+      "raw_content": "Abstract: Classical molecular dynamics (MD) augmented with quantum-mechanical / molecular-mechanical (QM/MM) free energy perturbation represents the prevailing gold standard for drug discovery. Here we conduct a comparative baseline across 40 ligand complexes.\nMethodology: Explicit solvent simulations using AMBER ff19SB and GAFF2 force fields over 500-nanosecond production trajectories, with binding free energies estimated via MM-GBSA and thermodynamic integration (TI).\nKey Findings: MM-GBSA achieved an Pearson correlation coefficient of r = 0.79 with experimental pIC50 values, but required 18,000 GPU hours across high-performance computing clusters.\nLimitations: High computational barrier precludes high-throughput screening of ultra-large virtual libraries (>10^9 compounds), necessitating hybrid quantum acceleration.",
+      "created_at": "2026-02-14T08:45:00.000Z"
+    }
+  ],
+  "document_chunks": [
+    {
+      "id": "f8a72ba1-8526-436b-aeb3-03084c7843ff",
+      "source_id": "20000000-0000-4000-8000-000000000001",
+      "chunk_index": 0,
+      "content": "Abstract: Variational quantum algorithms present an unprecedented avenue for simulating complex biomolecular interactions. In this study, we implement a modified Variational Quantum Eigensolver (VQE) with hardware-efficient ansatz on a 127-qubit superconducting quantum processor. We target the catalytic pocket of SARS-CoV-2 main protease (Mpro) complexed with candidate covalent inhibitors.\nMethodology: Active space orbital selection is performed using complete active space self-consistent field (CASSCF) calculations, mapping 14 active electrons into 14 spatial orbitals (28 qubits). Zero-noise extrapolation (ZNE) and readout error mitigation are applied to suppress hardware decoherence.\nKey Findings: The hybrid quantum-classical pipeline resolved ground-state binding energy within 1.4 kcal/mol of high-level CCSD(T) benchmarks, demonstrating chemical accuracy while reducing classical compute runtime by 64% compared to standard density functional theory (DFT) grids.\nLimitations: Scalability remains constrained by two-qubit gate error rates (>0.5%) and shot noise, limiting current feasibility to small fragments rather than full peptide complexes.",
+      "token_count": 290
+    },
+    {
+      "id": "eeb2c240-1496-4298-b48d-a638ee76d30c",
+      "source_id": "20000000-0000-4000-8000-000000000002",
+      "chunk_index": 0,
+      "content": "Abstract: Quantum annealing offers discrete optimization capabilities well-suited for combinatorial peptide conformational search. We map protein-ligand side-chain rotamer placement to a Quadratic Unconstrained Binary Optimization (QUBO) Hamiltonian and execute sampling on an Advantage 5000+ qubit annealer.\nMethodology: The continuous conformational space is discretized into Dunbrack rotamer libraries. Energy terms including Lennard-Jones, electrostatic Coulomb, and desolvation are precalculated to generate the interaction matrix. Chain strength parameters were systematically calibrated between 1.5 and 4.0.\nKey Findings: The quantum annealer identified low-energy native-like binding poses in under 22 milliseconds per candidate, outperforming standard simulated annealing and genetic algorithms (AutoDock Vina) by 3 orders of magnitude in search latency, with top-1 RMSD < 1.2 Å.\nLimitations: Severe graph embedding bottlenecks due to Pegasus connectivity limit simultaneous modeling to at most 45 amino acid residues.",
+      "token_count": 257
+    },
+    {
+      "id": "f8ac1ced-0c5d-4185-865c-fe969f251c42",
+      "source_id": "20000000-0000-4000-8000-000000000003",
+      "chunk_index": 0,
+      "content": "Abstract: Classical molecular dynamics (MD) augmented with quantum-mechanical / molecular-mechanical (QM/MM) free energy perturbation represents the prevailing gold standard for drug discovery. Here we conduct a comparative baseline across 40 ligand complexes.\nMethodology: Explicit solvent simulations using AMBER ff19SB and GAFF2 force fields over 500-nanosecond production trajectories, with binding free energies estimated via MM-GBSA and thermodynamic integration (TI).\nKey Findings: MM-GBSA achieved an Pearson correlation coefficient of r = 0.79 with experimental pIC50 values, but required 18,000 GPU hours across high-performance computing clusters.\nLimitations: High computational barrier precludes high-throughput screening of ultra-large virtual libraries (>10^9 compounds), necessitating hybrid quantum acceleration.",
+      "token_count": 208
+    }
+  ],
+  "synthesis_reports": [
+    {
+      "id": "30000000-0000-4000-8000-000000000001",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "title": "Comparative Literature Matrix: Quantum vs Classical Molecular Docking",
+      "synthesized_content": {
+        "theme": "Quantum and Hybrid Algorithmic Approaches in Molecular Docking and Binding Affinity Estimation",
+        "summary": "Synthesis across three benchmark investigations reveals a clear paradigm shift: while classical QM/MM free energy calculations provide high correlation (r = 0.79) to empirical assays, their extreme computational footprint (18,000 GPU hours) renders them non-viable for billion-molecule campaigns. Quantum annealers achieve massive 3-order-of-magnitude reductions in rotamer conformational search latency (<22ms), and gate-based VQE pipelines achieve chemical accuracy (<1.4 kcal/mol) for target active sites, though limited by graph embedding constraints and two-qubit fidelity.",
+        "comparison_matrix": [
+          {
+            "source_title": "Variational Quantum Eigensolver for Catalytic Protease Binding Affinity",
+            "research_objective": "Simulate electronic ground-state binding energy in Mpro catalytic site using 127-qubit superconducting hardware.",
+            "methodology": "CASSCF active space reduction (14e, 14o) mapped to 28 qubits with hardware-efficient ansatz and Zero-Noise Extrapolation (ZNE).",
+            "key_findings": "Achieved chemical accuracy within 1.4 kcal/mol of CCSD(T) benchmark while cutting classical compute runtime by 64%.",
+            "limitations": "Susceptible to two-qubit gate error rates (>0.5%) and shot noise, limiting active space size to 28 qubits."
+          },
+          {
+            "source_title": "QUBO Mapping of Rotamer Optimization on D-Wave Quantum Annealers",
+            "research_objective": "Formulate side-chain rotamer conformation search as a discrete combinatorial QUBO optimization.",
+            "methodology": "Discretized Dunbrack rotamer libraries embedded into Pegasus graph topology on Advantage 5000+ qubit processor.",
+            "key_findings": "Convergence to low-energy binding poses in 22ms per candidate with top-1 RMSD < 1.2 Å, 1000x faster than AutoDock Vina.",
+            "limitations": "Pegasus topology embedding limits current complex size to 45 residues without graph partitioning."
+          },
+          {
+            "source_title": "Benchmark of Classical QM/MM Free Energy Perturbation in High-Throughput Screening",
+            "research_objective": "Establish rigorous accuracy and computational cost baseline for classical explicit-solvent MD and MM-GBSA.",
+            "methodology": "500-nanosecond production runs in AMBER ff19SB/GAFF2 across 40 complex systems.",
+            "key_findings": "Strong correlation (r = 0.79) with experimental pIC50 values.",
+            "limitations": "Prohibitive computational cost (18,000 GPU hours) prevents application to ultra-large combinatorial compound libraries."
+          }
+        ],
+        "research_gaps": [
+          "Absence of fault-tolerant error correction restricts full-scale protein-ligand simulation beyond small catalytic pockets.",
+          "Lack of end-to-end automated pipelines that seamlessly bridge QUBO rotamer screening with downstream gate-based VQE refinement.",
+          "Standardized experimental wet-lab validation datasets specifically tailored for quantum algorithmic benchmarking."
+        ],
+        "future_directions": [
+          "Develop hybrid quantum-classical multi-scale workflows coupling quantum annealing for rapid pose filtering with VQE for exact free energy refinement.",
+          "Incorporate tensor network state approximations (MPS/PEPS) as classical pre-conditioners to scale qubit active spaces.",
+          "Explore error-mitigated quantum machine learning (QML) kernels to predict solvent reorganization energies without explicit QM solvent molecules."
+        ]
+      },
+      "created_at": "2026-02-15T16:00:00.000Z"
+    }
+  ],
+  "chat_messages": [
+    {
+      "id": "c9b00d94-fa03-4ad3-b78c-9937d021a228",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "sender": "user",
+      "message": "How does the Variational Quantum Eigensolver (VQE) method compare against classical QM/MM regarding accuracy and computational overhead?",
+      "created_at": "2026-02-15T16:10:00.000Z"
+    },
+    {
+      "id": "047bf244-c017-4d28-ab90-d536aaa810ee",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "sender": "ai",
+      "message": "Based on the ingested research corpus:\n\n1. **Chemical Accuracy**: The VQE implementation demonstrated binding energy resolution within **1.4 kcal/mol** of high-level CCSD(T) benchmarks when targeting the SARS-CoV-2 Mpro catalytic pocket [Variational Quantum Eigensolver for Catalytic Protease Binding Affinity]. Meanwhile, classical MM-GBSA achieves an experimental correlation of **r = 0.79** [Benchmark of Classical QM/MM Free Energy Perturbation in High-Throughput Screening].\n\n2. **Computational Runtime**: VQE reduced classical compute runtime by **64%** compared to standard DFT grids [Variational Quantum Eigensolver for Catalytic Protease Binding Affinity]. In contrast, the classical QM/MM free energy perturbation protocol consumed over **18,000 GPU hours**, presenting a severe bottleneck for screening libraries exceeding 10⁹ compounds.\n\n3. **Current Constraints**: VQE remains bound by two-qubit gate errors (>0.5%) and shot noise, limiting active space representation to 28 qubits, whereas classical MD handles thousands of explicit solvent atoms despite its high compute demands.",
+      "citations": [
+        {
+          "source_title": "Variational Quantum Eigensolver for Catalytic Protease Binding Affinity",
+          "chunk_index": 0,
+          "quote": "The hybrid quantum-classical pipeline resolved ground-state binding energy within 1.4 kcal/mol of high-level CCSD(T) benchmarks, demonstrating chemical accuracy while reducing classical compute runtime by 64%"
+        },
+        {
+          "source_title": "Benchmark of Classical QM/MM Free Energy Perturbation in High-Throughput Screening",
+          "chunk_index": 0,
+          "quote": "MM-GBSA achieved an Pearson correlation coefficient of r = 0.79 with experimental pIC50 values, but required 18,000 GPU hours across high-performance computing clusters."
+        }
+      ],
+      "created_at": "2026-02-15T16:10:04.000Z"
+    },
+    {
+      "id": "c6597940-90b7-445a-ba21-9dc5de4a4754",
+      "project_id": "10000000-0000-4000-8000-000000000001",
+      "sender": "user",
+      "message": "What were the convergence speed and RMSD for D-Wave quantum annealing?",
+      "citations": [],
+      "created_at": "2026-10-30T06:13:18.449Z"
+    }
+  ]
+}
